@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "861023021640",
+    "project_id": "tiquetz",
+    "storage_bucket": "tiquetz.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:861023021640:android:217dca4722502c1952467d",
+        "android_client_info": {
+          "package_name": "com.example.ticketz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "861023021640-2vouoh776kl269mhfkqff2nmr6efbdlg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ticketz",
+            "certificate_hash": "2b999483c2674e6c205719560b76ecc3fa1118da"
+          }
+        },
+        {
+          "client_id": "861023021640-g355k63m4vu4len8866k3kaddveaqc7b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTkgR36gFPnBPldndc_tyU3mVE1SpKM5k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "861023021640-g355k63m4vu4len8866k3kaddveaqc7b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
