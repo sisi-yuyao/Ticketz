@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.ticketz.databinding.ActivityRegistroBinding;
@@ -25,6 +26,11 @@ public class registro extends AppCompatActivity {
     FirebaseAuth firebaseAuth;
     private ProgressDialog progressDialog;
 
+    //actionbar
+    private ActionBar actionBar;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +38,17 @@ public class registro extends AppCompatActivity {
 
         binding= ActivityRegistroBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+
+        // configuracion del actionbar, title, back button
+
+
+        actionBar=getSupportActionBar();
+        actionBar.setTitle("registro");
+        actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setDisplayShowHomeEnabled(true);
+
+
 
         firebaseAuth= FirebaseAuth.getInstance();
 
@@ -52,18 +69,37 @@ public class registro extends AppCompatActivity {
         });
 }
 
+                public boolean onSupportNavigateUp(){
+
+        onBackPressed();//go ot previous aactivty when back button of action bar clicked
+        return super.onSupportNavigateUp();
+
+
+
+
+}
+
+
+
+
+
+
+
             private void validateData() {
             
         //get data
                 email=binding.correo.getText().toString().trim();
-                password=binding.contraseA.getText().toString().trim();
+                password=binding.contrasena.getText().toString().trim();
                 
                 //validar data
                 
                 if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-                    binding.correo.setError("email invalido");
+                  //  binding.correo.setError("email invalido");
+
+
+
                 }else if (TextUtils.isEmpty(password)){
-                    binding.contraseA.setError("introduce la contraseña");
+                    binding.contrasena.setError("introduce la contraseña");
                     
                 }else if(password.length()<6){
                     binding.correo.setError("la contraseña tiene que ser mayor de 6");
@@ -86,8 +122,7 @@ public class registro extends AppCompatActivity {
                 FirebaseUser firebaseUser=firebaseAuth.getCurrentUser();
                 String email = firebaseUser.getEmail();
                 Toast.makeText(registro.this,"cuenta creada\n"+email, Toast.LENGTH_SHORT).show();
-            startActivity(new Intent(registro.this, menuprincipal.class));
-            finish();
+
             }
         })
 .addOnFailureListener(new OnFailureListener() {
@@ -105,4 +140,3 @@ public class registro extends AppCompatActivity {
 
 }
 
-}    

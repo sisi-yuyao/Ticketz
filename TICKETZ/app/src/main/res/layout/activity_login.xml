@@ -21,7 +21,7 @@
             android:layout_height="62dp"
             android:layout_margin="30dp"
             android:fontFamily="@font/titillium_web_bold_italic"
-            android:text="Inicia sesión-holaaaaaaaaaa"
+            android:text="Inicia sesión"
             android:textAlignment="center"
             android:textSize="34sp" />
 
@@ -64,5 +64,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="25dp" />
+
+        <TextView
+            android:id="@+id/tengocuenta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="¿ya tienes cuenta? registrate"
+            android:textAlignment="center"
+            style="@style/Animation.Design.BottomSheetDialog"
+
+            />
+
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
