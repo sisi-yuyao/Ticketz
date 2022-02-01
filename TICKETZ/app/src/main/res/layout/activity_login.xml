@@ -21,7 +21,7 @@
             android:layout_height="62dp"
             android:layout_margin="30dp"
             android:fontFamily="@font/titillium_web_bold_italic"
-            android:text="Inicia sesión-holaaa"
+            android:text="Inicia sesión-holaaaaaaa"
             android:textAlignment="center"
             android:textSize="34sp" />
 
