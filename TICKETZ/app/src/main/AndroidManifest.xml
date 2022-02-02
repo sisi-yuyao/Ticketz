@@ -12,6 +12,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TICKETZ">
         <activity
+            android:name=".expo"
+            android:exported="true" />
+        <activity
+            android:name=".furbo"
+            android:exported="true" />
+        <activity
+            android:name=".conci"
+            android:exported="true" />
+        <activity
+            android:name=".calendario"
+            android:exported="true" />
+        <activity
             android:name=".profile"
             android:exported="false" />
         <activity

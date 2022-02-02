@@ -37,24 +37,24 @@ public class login extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-      binding= ActivityLoginBinding.inflate(getLayoutInflater());
+        binding = ActivityLoginBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
 
-        actionBar=getSupportActionBar();
+        actionBar = getSupportActionBar();
         actionBar.setTitle("login");
 
 
-        progressDialog= new ProgressDialog(this);
+        progressDialog = new ProgressDialog(this);
         progressDialog.setTitle("please wait");
         progressDialog.setMessage("loggin in");
-            progressDialog.setCanceledOnTouchOutside(false);
+        progressDialog.setCanceledOnTouchOutside(false);
 
 
-firebaseAuth=FirebaseAuth.getInstance();
+        firebaseAuth = FirebaseAuth.getInstance();
         checkUser();
 
-            //si tienes cuenta clicka aqui
+        //si tienes cuenta clicka aqui
         binding.tengocuenta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -63,19 +63,19 @@ firebaseAuth=FirebaseAuth.getInstance();
             }
 
         });
-            binding.botonIn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    //validate data
-                    validateData();
-                }
-            });
+        binding.botonIn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //validate data
+                validateData();
+            }
+        });
 
-
+    }
         private void checkUser() {
 FirebaseUser firebaseUser= firebaseAuth.getCurrentUser();
 if(firebaseUser!=null){
-    startActivity(new Intent(this,profile.class));
+    startActivity(new Intent(this,menuprincipal.class));
     finish();
 
 
@@ -115,7 +115,7 @@ if(firebaseUser!=null){
 
 
 
-    }
+
 
 
     private void firebaselogin() {
@@ -147,7 +147,6 @@ if(firebaseUser!=null){
 
     }
 }
-
 
 
 
